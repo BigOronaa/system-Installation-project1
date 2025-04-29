@@ -11,8 +11,13 @@ This document covers the installation steps for the development environment tool
 - Run the installer and accept default settings.
 - After installation, open PowerShell and verify Git:
 
-```powershell
-git --version
+powershell git --version.
+
+## Add an image here
+![git-download](git-download.png)
+![Git Installation](git-installation.png)
+
+
 
 # Visual Studio Code Installation and Setup Guide (PowerShell)
 
@@ -20,7 +25,7 @@ This guide details how to install and configure Visual Studio Code (VS Code) for
 
 ---
 
-## 1. Download and Install VS Code
+## 2. Download and Install VS Code
 
 - Visit the official Visual Studio Code website: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - Download the appropriate installer for your operating system (Windows, macOS, or Linux).
@@ -28,47 +33,52 @@ This guide details how to install and configure Visual Studio Code (VS Code) for
 - Accept the default installation options for simplicity.
 - After installation, VS Code should be available in your system's PATH.
 
+## add image here
+![VS Code Download](vs-code-download.png)
 ---
 
-## 2. Verify VS Code Installation
+##  Verify VS Code Installation
 
 Open PowerShell and run:
 
-```powershell
+powershell
 code --version
 
-# SSH and SSH-Agent Setup 
 
-This guide details how to install and configure SSH along with the SSH-Agent for GitHub access using PowerShell.
 
 ---
 # Installing Extensions in Visual Studio Code
-## 1. Open Extensions View
+### 1. Open Extensions View
 
 To begin installing extensions:
 
 - Open VS Code.
 - Click on the **Extensions** icon in the Activity Bar on the side of the window
-## 2. Search for Extensions
+### 2. Search for Extensions
 
 - In the Extensions view, you’ll see a search bar at the top.
 - Type the name of the extension you want to install (e.g., "GitLens", "Prettier", "Python", etc.).
 - Extensions will appear in the search results.
-## 3. Install an Extension
+### 3. Install an Extension
 
 - Click on the **Install** button next to the extension you want to add.
 - The extension will be automatically installed and ready for use.
 
-## 1. Verify SSH Installation
+## add image here
+![VS Code Extension Installation](vs-code-extensions.png)
+
+## 3.  SSH and SSH-Agent Setup 
+
+This guide details how to install and configure SSH along with the SSH-Agent for GitHub access using PowerShell.
 
 
 1. Go to **Settings** → **Apps** → **Optional Features**
 2. Look for **OpenSSH Client**. If not installed, click on **Add a feature** → **OpenSSH Client** → Install.
 
 Verify SSH is installed by running:
-
-```powershell
+powershell
 ssh -V
+
 
 # SSH Agent Setup 
 
@@ -76,10 +86,11 @@ ssh -V
 
 ## 1. Check if SSH is Installed
 
-```powershell
+powershell
 ssh -V
 ssh-keygen -t rsa ed25519 "edwardoronaa@gmail.com" 
 Press Enter to accept the default file location for your SSH key. You can also add a passphrase (optional) or leave it empty.
+
 
 Next, start the SSH-Agent to manage your SSH keys. Run the following in PowerShell:
 Get-Service ssh-agent | Set-Service -StartupType Automatic
@@ -90,6 +101,8 @@ ssh-add $env:USERPROFILE\.ssh\id_rsa
 Verify SSH-Agent is Running
 ssh-add -L
 
+## add image here
+![ssh-keys](ssh-keys.png)
 # GitHub Account Creation Guide
 
 This guide walks through the process of creating a GitHub account.
